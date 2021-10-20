@@ -1,8 +1,8 @@
 # AR_VR_class
 
-###AR_VR_class repo
+### AR_VR_class repo
 
-######the warmup Sobel edge detector program
+###### The warmup Sobel edge detector program
 command with command line arguments used to run the program
 
 ```angular2html
