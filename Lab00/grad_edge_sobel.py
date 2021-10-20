@@ -1,10 +1,11 @@
 #!/usr/local/bin/python3
+
 import sys
 from PIL import Image
 import numpy as np
 import math
 
-if len(sys.argv) != 2:
+if len(sys.argv) != 4:
     print("usage is: %s image_in image_out thresh" % (sys.argv[0]))
     print("     thresh is between 0 and 255")
     print("     smaller values make detection more sensitive")
@@ -26,7 +27,7 @@ print(f"rows = {rows}; cols = {cols}; thresh = {thresh}")
 image_out = np.zeros((rows, cols), np.float)
 # horizontal
 for i in range(1, rows - 1):
-    image_out[i, 1:, -1] = (
+    image_out[i, 1:-1] = (
                                    (image_bw[i - 1, 2:] - image_bw[i - 1, :-2]) + \
                                    (image_bw[i, 2:] - image_bw[i, :-2]) * 2 + \
                                    (image_bw[i + 1, 2:] - image_bw[i + 1, :-2])
@@ -34,9 +35,9 @@ for i in range(1, rows - 1):
 
 # vertical
 for j in range(1, cols - 1):
-    image_out[1:, -1, j] = (
+    image_out[1:-1, j] = (
                                    (image_bw[2:, j - 1] - image_bw[:-2, j - 1]) + \
-                                   (image_bw[2:, j] - image_bw[:-2:j]) * 2 + \
+                                   (image_bw[2:, j] - image_bw[:-2, j]) * 2 + \
                                    (image_bw[2:, j + 1] - image_bw[:-2, j])
                            ) ** 2
 
