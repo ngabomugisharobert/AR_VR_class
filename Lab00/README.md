@@ -14,5 +14,5 @@ python .\grad_edge_sobel.py .\african_soccer.jpg '.\Edge Detected Image.jpg' 30
 
 
 #### **Edge Detected Image**
-![alt text]('./Edge Detected Image.jpg'?raw=true)
+![alt text](https://github.com/ngabomugisha/AR_VR_class/blob/main/Lab00/Edge%20Detected%20Image.jpg?raw=true)
 
