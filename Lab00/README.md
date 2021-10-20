@@ -14,5 +14,5 @@ python .\grad_edge_sobel.py .\african_soccer.jpg '.\Edge Detected Image.jpg' 30
 
 
 #### **Edge Detected Image**
-![alt text](./Edge Detected Image.jpg?raw=true)
+![alt text]('./Edge Detected Image.jpg'?raw=true)
 
