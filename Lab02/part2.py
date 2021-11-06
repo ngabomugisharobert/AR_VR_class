@@ -32,6 +32,7 @@ import numpy as np
 import scipy
 from scipy import linalg, matrix
 from scipy.interpolate import  griddata
+import seaborn as sns
 import math
 
 stars_data = pd.read_csv("star_data_lots.csv")
@@ -69,5 +70,9 @@ for i in range(stars_data.shape[0]):
 #img2 = Image.fromarray(img)
 #img.save('my.png')
 
+#convk = np.asarray([(0.0,0.5,0.0), (0.5,1.0,0.5), (0.0,0.5,0.0)], np.float32)
+#imdat = signal.convolved2d(imdat, convk)
+
 final = Image.fromarray(img.astype(np.uint8))
 final.show()
+final.save("final.png",format="png")
