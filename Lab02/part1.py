@@ -34,7 +34,6 @@ max_phi = math.atan(height/(2*d)) * (180/math.pi)
 max_teta = math.atan(width/(2*d)) * (180/math.pi)
 
 
-
 phi = np.linspace(-90,90,N)
 teta = np.linspace(-90,90,N)
 
